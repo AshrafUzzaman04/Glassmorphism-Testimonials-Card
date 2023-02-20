@@ -6,6 +6,7 @@
   box-sizing: border-box;
   font-family: "PT Serif", serif;
 }
+
 .main_container {
   width: auto;
   min-height: 100vh;
@@ -141,6 +142,51 @@
       }
       > .details {
         > p {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 500px) {
+  .main_container {
+    > .box {
+      > .card {
+        width: 250px;
+      }
+      > .elements {
+        width: 80px;
+        height: 80px;
+      }
+      > .img_box {
+        right: 50px;
+        width: 100px;
+        height: 100px;
+        > img {
+          opacity: 1;
+        }
+      }
+      > .bg {
+        &::before {
+          background-size: 50px;
+          opacity: 1;
+        }
+      }
+      > .name {
+        top: 130px;
+        right: 10px;
+        width: 100%;
+        opacity: 1;
+        > h2 {
+          font-size: 20px;
+        }
+      }
+      > .details {
+        right: -15px;
+        width: 85%;
+        > p {
+          font-size: 0.75em;
+          color: #3e43c5;
           opacity: 1;
         }
       }

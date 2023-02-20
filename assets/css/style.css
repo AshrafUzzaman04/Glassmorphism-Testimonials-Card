@@ -140,4 +140,44 @@
 }
 .main_container > .box:hover > .details > p {
   opacity: 1;
+}
+
+@media screen and (max-width: 500px) {
+  .main_container > .box > .card {
+    width: 250px;
+  }
+  .main_container > .box > .elements {
+    width: 80px;
+    height: 80px;
+  }
+  .main_container > .box > .img_box {
+    right: 50px;
+    width: 100px;
+    height: 100px;
+  }
+  .main_container > .box > .img_box > img {
+    opacity: 1;
+  }
+  .main_container > .box > .bg::before {
+    background-size: 50px;
+    opacity: 1;
+  }
+  .main_container > .box > .name {
+    top: 130px;
+    right: 10px;
+    width: 100%;
+    opacity: 1;
+  }
+  .main_container > .box > .name > h2 {
+    font-size: 20px;
+  }
+  .main_container > .box > .details {
+    right: -15px;
+    width: 85%;
+  }
+  .main_container > .box > .details > p {
+    font-size: 0.75em;
+    color: #3e43c5;
+    opacity: 1;
+  }
 }/*# sourceMappingURL=style.css.map */
