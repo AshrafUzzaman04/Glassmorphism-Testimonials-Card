@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "PT Serif", serif;
+}
+.main_container {
+  width: auto;
+  min-height: 100vh;
+  background-image: url("../img/pexels-invisiblepower-1076885.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  > .box {
+    position: relative;
+    border-radius: 20px;
+    transform-style: preserve-3d;
+    > .card {
+      position: relative;
+      background: rgba(255, 255, 255, 0.1);
+      width: 300px;
+      min-height: 400px;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      border-top: 1px solid rgba(255, 255, 255, 0.75);
+      border-left: 1px solid rgba(255, 255, 255, 0.5);
+      border-radius: 20px;
+      box-shadow: 0 25px 45px rgba(0, 0, 0, 0.05);
+      transform-style: preserve-3d;
+    }
+    > .elements {
+      position: absolute;
+      top: 50px;
+      left: -30px;
+      width: 100px;
+      height: 100px;
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateZ(80px);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      border-top: 1px solid rgba(255, 255, 255, 0.75);
+      border-left: 1px solid rgba(255, 255, 255, 0.5);
+      border-radius: 10px;
+    }
+    > .img_box {
+      top: 0;
+      left: inherit;
+      right: 60px;
+      width: 120px;
+      height: 120px;
+      transform: translateZ(120px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      > img {
+        position: absolute;
+        width: calc(100% - 20px);
+        height: calc(100% - 20px);
+        border-radius: 8px;
+        opacity: 0;
+        transition: all 0.5s ease-in-out;
+      }
+    }
+    > .bg {
+      &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: url("../img/left-quote.png");
+        background-size: 60px;
+        background-repeat: no-repeat;
+        background-position: center;
+        opacity: 0;
+        transition: all 0.5s ease-in-out;
+      }
+    }
+    > .name {
+      top: 200px;
+      left: inherit;
+      right: 0;
+      width: 100%;
+      padding: 20px;
+      text-align: right;
+      background: transparent;
+      border: none;
+      backdrop-filter: blur(0px);
+      transform: translateZ(150px);
+      box-shadow: none;
+      color: #4b50eb;
+      opacity: 0;
+      transition: 0.5s;
+      transition-delay: 0.25s;
+      > h2 {
+        font-family: "Roboto Slab", serif;
+      }
+    }
+    > .details {
+      top: 200px;
+      left: inherit;
+      bottom: 0;
+      right: -20px;
+      width: 85%;
+      min-height: 200px;
+      height: max-content;
+      transform: translateZ(150px);
+      padding: 10px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      > p {
+        position: relative;
+        font-size: 0.85em;
+        transition: 0.5s;
+        color: #4f53c2;
+        transition-delay: 0.5s;
+        transition: 0.5s;
+        opacity: 0;
+      }
+    }
+    // card box hover results
+    &:hover {
+      > .bg {
+        &::before {
+          opacity: 1;
+        }
+      }
+      > .img_box {
+        > img {
+          opacity: 1;
+        }
+      }
+      > .name {
+        top: 135px;
+        opacity: 1;
+      }
+      > .details {
+        > p {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
